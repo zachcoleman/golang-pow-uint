@@ -33,7 +33,7 @@ func LoopPow[T constraints.Integer | constraints.Float](x T, n uint) T {
 	return ret
 }
 
-func BenchmarkIntPow(b *testing.B) {
+func BenchmarkPowUint(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for x := 1; x < 4; x++ {
 			for n := 0; n < 20; n++ {
