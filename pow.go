@@ -2,7 +2,7 @@ package main
 
 import "golang.org/x/exp/constraints"
 
-// PowUint provides a faster implementation of x^n where n in an integer and n >= 0
+// PowUint provides a faster implementation of x^n where n is a uint
 // the algorithm is O(log2(n))
 func PowUint[T constraints.Integer | constraints.Float](x T, n uint) T {
 	if x == 0 || n == 0 {
