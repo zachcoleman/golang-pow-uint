@@ -1,4 +1,4 @@
-package main
+package pow
 
 import (
 	"math"
@@ -72,7 +72,7 @@ func BenchmarkMathPow(b *testing.B) {
 		}
 		for x := 1.; x < 4; x += 0.2 {
 			for n := 0; n < 20; n++ {
-				_ = int(math.Pow(float64(x), float64(n)))
+				_ = int(math.Pow(x, float64(n)))
 			}
 		}
 	}
